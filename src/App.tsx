@@ -8,7 +8,7 @@ import { Notfound } from './pages/NotFound.tsx';
 import { SinglePage } from './pages/SinglePage.tsx';
 import { UX_course } from './pages/UX-course.tsx';
 import './utils/i18n.ts';
-
+import { StudWorks } from './components/Student-wroks.tsx';
 
 function App() {
   return (
