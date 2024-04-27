@@ -319,52 +319,6 @@ padding: 25px 25px;}
   padding: 25px 15px 0 15px;
 }
 
- @media screen and (max-width:980px) { 
- 
- .after-block-content {
-     flex-direction: column;
- }
- .after-block__left {
-     max-width: 100vw;
- }
- .after-block__right {
-     width: 100%;
- }
- .more-block {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 15px;
-}
-
-.more-block-item {
-  max-width: 100%;
-
-}
-
- 
- }
- 
- @media screen and (max-width:540px) {
-
-  .studworks {
-    display: none;
-  }
- 
-     .after-block__right-img {
-         display: none;
-     }
-     .after-block__right-info {
-         flex-direction: column;
-     }
- 
-     :root {
-         --scale: 100vw/375;
-     }
-     .work-imgs {
-      flex-direction: column;
-  }
- }
 
  .work-imgs {
   display: flex;
@@ -415,3 +369,97 @@ padding: 25px 25px;}
 .studworks-title {
   font-size: 65px;
 }
+
+.for-whom-title  {
+  color: black;
+}
+
+.for-whom-list {
+  display: flex;
+  gap: 15px;
+}
+
+.for-whom-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 0 calc(var(--scale)* 10);
+    min-height: calc(var(--scale)* 330);
+    padding: calc(var(--scale)* 25);
+    width: 100%;
+}
+
+.for-whom-item-Title {
+  color: #161616;
+  font-size: 25px;
+}
+.for-whom-item-text {
+  color: #161616b1;
+  font-size: 20px;
+}
+
+.custom-typography-class {
+  margin-right: 15px !important;
+}
+
+
+@media screen and (max-width:980px) { 
+ 
+  .after-block-content {
+      flex-direction: column;
+  }
+  .after-block__left {
+      max-width: 100vw;
+  }
+  .after-block__right {
+      width: 100%;
+  }
+  .more-block {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 15px;
+ }
+ 
+ .more-block-item {
+   max-width: 100%;
+ 
+ }
+ 
+  
+  }
+  
+  @media screen and (max-width:560px) {
+ 
+   .studworks {
+     display: none;
+   }
+  
+      .after-block__right-img {
+          display: none;
+      }
+      .after-block__right-info {
+          flex-direction: column;
+      }
+  
+      :root {
+          --scale: 100vw/375;
+      }
+      .work-imgs {
+       flex-direction: column; 
+   }
+ 
+   .for-whom-list {
+     flex-direction: column;
+   }
+   .for-whom-title {
+     font-size: 30px;
+   }
+
+   .for-whom-item {
+    padding: 5px 5px;
+   }
+ 
+  }
+
+  

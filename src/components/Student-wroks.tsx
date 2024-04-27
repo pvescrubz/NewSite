@@ -33,6 +33,20 @@ export const StudWorks = () => {
           <img className="studworks-img" src="../../public/studworks24.jpeg" alt="" ></img>
         </div>  
       </div>
+
+      <div className="for-whom">
+        <h2 className="for-whom-title studworks-title">Кому подойдет </h2>
+        <div className="for-whom-list">
+          <div className="for-whom-item white-round">
+            <h3 className="for-whom-item-Title">Желающим сменить сферу деятельности</h3>
+            <p className="for-whom-item-text">Освоите новую профессию с нуля. Через 5 месяцев получите достаточно знаний, чтобы брать первые рабочие проекты.</p>
+          </div>
+          <div className="for-whom-item white-round"> <h3 className="for-whom-item-Title">Желающим сменить сферу деятельности</h3>
+            <p className="for-whom-item-text">Освоите новую профессию с нуля. Через 5 месяцев получите достаточно знаний, чтобы брать первые рабочие проекты.</p></div>
+          <div className="for-whom-item white-round"> <h3 className="for-whom-item-Title">Желающим сменить сферу деятельности</h3>
+            <p className="for-whom-item-text">Освоите новую профессию с нуля. Через 5 месяцев получите достаточно знаний, чтобы брать первые рабочие проекты.</p></div>
+        </div>
+      </div>
     </div>
   );
 };
