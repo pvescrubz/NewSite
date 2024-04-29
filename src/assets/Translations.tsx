@@ -16,6 +16,9 @@ const TranslationsContent = {
        * Курсы UX
        */
       ux: {
+        accordion: {
+          text1: "some-text"
+  },
           swiper: {
             img1: "../../public/UX-swiper3.jpeg",
             text1: "E-commerce",
@@ -40,8 +43,16 @@ const TranslationsContent = {
             "rightBottomText1": "15 500 ",
             "rightBottomSpan": "Ваканский в СНГ",
             "linkedInData": "По данным Linkedln"
+          },
+          
+      },
+      /**
+       * Курсы дизайнера
+       */
+      design: {
+          accordion: {
+            text1: "some-text"
           }
-
       }
     },
     en: {
