@@ -13,36 +13,51 @@ const SummaryText = styled(Typography)({
 export const AccordionExpandDefault = () => {
   return (
     <div>
-      <Accordion defaultExpanded>
+      <Accordion defaultExpanded className='accordion-block'>
       {/* <StyledTypography>12 month</StyledTypography> */}
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"
           id="panel1-header"
         >  
-        <SummaryText className="custom-typography-class">12 month</SummaryText>
-        <Typography> Expanded by default</Typography>
+        <SummaryText className="accordion-title">12 month</SummaryText>
+        <div className='accordion-title_block white-round'>
+        <Typography className="accordion-module">Модуль 1</Typography>
+        <Typography className='accordion-module-name'>Основы UX/UI-дизайна</Typography>
+        </div>
+        
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
+        <ul className='accordion-list'>
+          <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae excepturi hic ad dolorum libero dolores accusantium blanditiis nesciunt provident consequuntur, et aperiam eius illo quas cumque, nemo animi! Consequatur, est.</li>
+          <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae excepturi hic ad dolorum libero dolores accusantium blanditiis nesciunt provident consequuntur, et aperiam eius illo quas cumque, nemo animi! Consequatur, est.</li>
+          <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae excepturi hic ad dolorum libero dolores accusantium blanditiis nesciunt provident consequuntur, et aperiam eius illo quas cumque, nemo animi! Consequatur, est.</li>
+          <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae excepturi hic ad dolorum libero dolores accusantium blanditiis nesciunt provident consequuntur, et aperiam eius illo quas cumque, nemo animi! Consequatur, est.</li>
+          
+        </ul>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
-        <AccordionSummary
+      <Accordion  className='accordion-block'>
+      <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2-content"
-          id="panel2-header"
-        >
-          <Typography>Header</Typography>
+          aria-controls="panel1-content"
+          id="panel1-header"
+        >  
+        <SummaryText className="accordion-title">12 month</SummaryText>
+        <div className='accordion-title_block white-round'>
+        <Typography className="accordion-module">Модуль 1</Typography>
+        <Typography className='accordion-module-name'>Основы UX/UI-дизайна</Typography>
+        </div>
+        
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
+        <ul className='accordion-list'>
+          <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae excepturi hic ad dolorum libero dolores accusantium blanditiis nesciunt provident consequuntur, et aperiam eius illo quas cumque, nemo animi! Consequatur, est.</li>
+          <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae excepturi hic ad dolorum libero dolores accusantium blanditiis nesciunt provident consequuntur, et aperiam eius illo quas cumque, nemo animi! Consequatur, est.</li>
+          <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae excepturi hic ad dolorum libero dolores accusantium blanditiis nesciunt provident consequuntur, et aperiam eius illo quas cumque, nemo animi! Consequatur, est.</li>
+          <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae excepturi hic ad dolorum libero dolores accusantium blanditiis nesciunt provident consequuntur, et aperiam eius illo quas cumque, nemo animi! Consequatur, est.</li>
+          
+        </ul>
         </AccordionDetails>
       </Accordion>
     </div>
