@@ -7,7 +7,7 @@ export const StudWorks = () => {
           <img
             className="studworks-img"
             src="../../public/studworks0.jpeg"
-          ></img>
+          ></img> 
           <img className="studworks-img" src="../../public/studworks1.jpeg" alt="" ></img>
           <img className="studworks-img" src="../../public/studworks2.jpeg" alt="" ></img>
           <img className="studworks-img" src="../../public/studworks3.jpeg" alt="" ></img>

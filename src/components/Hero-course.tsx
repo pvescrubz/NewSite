@@ -2,14 +2,14 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import VolcanoIcon from "@mui/icons-material/Volcano";
 import GroupAddIcon from '@mui/icons-material/GroupAdd';
-import MySlider from './Swiper';
+import {MySlider} from './Swiper';
 
 
 export const HeroBlock: React.FC = () => {
   const { t } = useTranslation();
   return (
     <div className="Hero-block container">
-      <h2 className="Hero-block__title">
+      <h2 className="Hero-block__title title-black">
       {t('ux.heroblock.title')}
       </h2>
       <div className="Hero-block__container">

@@ -1,4 +1,6 @@
-import './App.css'
+import './normalize.css';
+import './App.css';
+
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout.tsx';
 import { Home } from './pages/Home.tsx';
@@ -8,6 +10,7 @@ import { Notfound } from './pages/NotFound.tsx';
 import { SinglePage } from './pages/SinglePage.tsx';
 import { UX_course } from './pages/UX-course.tsx';
 import './utils/i18n.ts';
+import { Price } from './components/Price.tsx';
 
 function App() {
   return (
@@ -22,6 +25,7 @@ function App() {
           <Route path="*" element={<Notfound />} />
         </Route>
       </Routes>
+      <Price />
     </>
   )
 }

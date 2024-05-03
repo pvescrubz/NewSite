@@ -44,6 +44,9 @@ const TranslationsContent = {
             "rightBottomSpan": "Ваканский в СНГ",
             "linkedInData": "По данным Linkedln"
           },
+          teachers: {
+            
+          },
           
       },
       /**
