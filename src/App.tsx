@@ -1,31 +1,29 @@
 import './normalize.css';
 import './App.css';
-
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout.tsx';
 import { Home } from './pages/Home.tsx';
-import { About } from './pages/About.tsx';
-import { Courses } from './pages/Courses.tsx';
 import { Notfound } from './pages/NotFound.tsx';
-import { SinglePage } from './pages/SinglePage.tsx';
-import { UX_course } from './pages/UX-course.tsx';
 import './utils/i18n.ts';
-import { Price } from './components/Price.tsx';
+import { UX_course } from './pages/UX-course.tsx';
+import { Graph_design } from './pages/Graph_design.tsx';
+import { Courseall } from './pages/Coursesall.tsx';
+import { D3_course } from './pages/3d-course.tsx';
 
 function App() {
+  
   return (
     <>
       <Routes>
         <Route path="/" element={<Layout />} >
           <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="courses" element={<Courses />} />
-          <Route path="UX-course" element={<UX_course />} />
-          <Route path="courses/:id" element={<SinglePage />} />
           <Route path="*" element={<Notfound />} />
+          <Route path="UX-course" element={<UX_course />} />
+          <Route path="Graph_design" element={<Graph_design />} />
+          <Route path="Courseall" element={<Courseall />} />
+          <Route path="3d-course" element={<D3_course />} />
         </Route>
       </Routes>
-      <Price />
     </>
   )
 }

@@ -1,13 +1,14 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { useTranslation } from "react-i18next";
+import React from 'react';
 
+interface MycontextPropse {
+  context: string; // Определяем тип context как строку
+  t: (key: string) => string; // Предполагая, что t имеет тип any, но лучше указать конкретный тип, если это возможно
+}
 
-
-export const MySlider = () => {
-
-  const { t } = useTranslation();
+export const MySlider:React.FC<MycontextPropse> = ({ context, t }) => {
 
   const settings = {
     dots: false,
@@ -16,7 +17,7 @@ export const MySlider = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true, // Enable autoplay
-    autoplaySpeed: 4000, // Set autoplay speed in milliseconds
+    autoplaySpeed: 2500, // Set autoplay speed in milliseconds
     arrows: false, // Убрать стрелки навигации
     adaptiveHeight: true, // Автоматический расчет высоты слайдов
     className: 'slider-container' // Добавить класс для дополнительного стилизования
@@ -26,28 +27,28 @@ export const MySlider = () => {
     <Slider {...settings}>
       <div>
         <div className='swiper-img__hero'>
-          <img className="swiper-img" src={t("ux.swiper.img3")} alt="Image 1" />
+          <img className="swiper-img" src={t(`${context}.swiper.img3`)} alt="Image 1" />
           <div className='swiper-text'>
-            <h2 className='swiper-title'>{t("ux.swiper.text1")}</h2>
-            <p className='swiper-text_small'>{t("ux.swiper.smalltext1")}</p>
+            <h2 className='swiper-title'>{t(`${context}.swiper.text1`)}</h2>
+            <p className='swiper-text_small'>{t(`${context}.swiper.smalltext1`)}</p>
           </div>
         </div>
       </div>
       <div>
         <div className='swiper-img__hero'>
-          <img className="swiper-img" src={t("ux.swiper.img1")} alt="Image 2" />
+          <img className="swiper-img" src={t(`${context}.swiper.img1`)} alt="Image 2" />
           <div className='swiper-text'>
-            <h2 className='swiper-title'>{t("ux.swiper.text2")}</h2>
-            <p className='swiper-text_small'>{t("ux.swiper.smalltext2")}</p>
+            <h2 className='swiper-title'>{t(`${context}.swiper.text2`)}</h2>
+            <p className='swiper-text_small'>{t(`${context}.swiper.smalltext2`)}</p>
           </div>
         </div>
       </div>
       <div>
         <div className='swiper-img__hero'>
-          <img className="swiper-img" src={t("ux.swiper.img2")} alt="Image 3" />
+          <img className="swiper-img" src={t(`${context}.swiper.img2`)} alt="Image 3" />
           <div className='swiper-text'>
-            <h2 className='swiper-title'>{t("ux.swiper.text3")}</h2>
-            <p className='swiper-text_small'>{t("ux.swiper.smalltext3")}</p>
+            <h2 className='swiper-title'>{t(`${context}.swiper.text3`)}</h2>
+            <p className='swiper-text_small'>{t(`${context}.swiper.smalltext3`)}</p>
           </div>
         </div>
       </div>
@@ -55,7 +56,7 @@ export const MySlider = () => {
   );
 };
 
-export const MySliderTeacher = () => {
+export const MySliderTeacher:React.FC<MycontextPropse> = ({ context, t }) => {
 
 
 
@@ -66,7 +67,7 @@ export const MySliderTeacher = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false, // Enable autoplay
-    autoplaySpeed: 4000, // Set autoplay speed in milliseconds
+    autoplaySpeed: 2500, // Set autoplay speed in milliseconds
     arrows: false, // Убрать стрелки навигации
     className: 'slider-container-teacher', // Добавить класс для дополнительного стилизования
   };
@@ -75,35 +76,21 @@ export const MySliderTeacher = () => {
     <div className="slider-container-teacher">
       <Slider {...settings}>
         <div className="white-round">
-          <img className="teachers-img white-round" src="./public/teacher1.jpg"></img>
-          <h2 className="teachers-title">Балик Тая</h2>
-          <p className="teachers-text">Консультант по пользовательскому опыту и продакт-менеджменту в EPAM Systems Spain. В прошлом — дизайн-директор IBM iX Russia&CEE, дизайн-лид в Luxoft Digital. Клиенты: Citibank (US), JPMorgan, GIC (Singapore), UBS, Blackhorse, Nordea, ING (Luxembourg) и другие. Лектор в Британской высшей школе дизайна.</p>
+          <img className="teachers-img white-round" src={t(`${context}.teachers.img1`)}></img>
+          <h2 className="teachers-title">{t(`${context}.teachers.name1`)}</h2>
+          <p className="teachers-text">{t(`${context}.teachers.desc1`)}</p>
         </div>
         <div className="white-round">
-          <img className="teachers-img white-round" src="./public/teacher1.jpg"></img>
-          <h2 className="teachers-title">Балик Тая</h2>
-          <p className="teachers-text">Консультант по пользовательскому опыту и продакт-менеджменту в EPAM Systems Spain. В прошлом — дизайн-директор IBM iX Russia&CEE, дизайн-лид в Luxoft Digital. Клиенты: Citibank (US), JPMorgan, GIC (Singapore), UBS, Blackhorse, Nordea, ING (Luxembourg) и другие. Лектор в Британской высшей школе дизайна.</p>
+        <img className="teachers-img white-round" src={t(`${context}.teachers.img2`)}></img>
+          <h2 className="teachers-title">{t(`${context}.teachers.name2`)}</h2>
+          <p className="teachers-text">{t(`${context}.teachers.desc2`)}</p>
         </div>
         <div className="white-round">
-          <img className="teachers-img white-round" src="./public/teacher1.jpg"></img>
-          <h2 className="teachers-title">Балик Тая</h2>
-          <p className="teachers-text">Консультант по пользовательскому опыту и продакт-менеджменту в EPAM Systems Spain. В прошлом — дизайн-директор IBM iX Russia&CEE, дизайн-лид в Luxoft Digital. Клиенты: Citibank (US), JPMorgan, GIC (Singapore), UBS, Blackhorse, Nordea, ING (Luxembourg) и другие. Лектор в Британской высшей школе дизайна.</p>
+        <img className="teachers-img white-round" src={t(`${context}.teachers.img3`)}></img>
+          <h2 className="teachers-title">{t(`${context}.teachers.name3`)}</h2>
+          <p className="teachers-text">{t(`${context}.teachers.desc3`)}</p>
         </div>
-        <div className="white-round">
-          <img className="teachers-img white-round" src="./public/teacher1.jpg"></img>
-          <h2 className="teachers-title">Балик Тая</h2>
-          <p className="teachers-text">Консультант по пользовательскому опыту и продакт-менеджменту в EPAM Systems Spain. В прошлом — дизайн-директор IBM iX Russia&CEE, дизайн-лид в Luxoft Digital. Клиенты: Citibank (US), JPMorgan, GIC (Singapore), UBS, Blackhorse, Nordea, ING (Luxembourg) и другие. Лектор в Британской высшей школе дизайна.</p>
-        </div>
-        <div className="white-round">
-          <img className="teachers-img white-round" src="./public/teacher1.jpg"></img>
-          <h2 className="teachers-title">Балик Тая</h2>
-          <p className="teachers-text">Консультант по пользовательскому опыту и продакт-менеджменту в EPAM Systems Spain. В прошлом — дизайн-директор IBM iX Russia&CEE, дизайн-лид в Luxoft Digital. Клиенты: Citibank (US), JPMorgan, GIC (Singapore), UBS, Blackhorse, Nordea, ING (Luxembourg) и другие. Лектор в Британской высшей школе дизайна.</p>
-        </div>
-        <div className="white-round">
-          <img className="teachers-img white-round" src="./public/teacher1.jpg"></img>
-          <h2 className="teachers-title">Балик Тая</h2>
-          <p className="teachers-text">Консультант по пользовательскому опыту и продакт-менеджменту в EPAM Systems Spain. В прошлом — дизайн-директор IBM iX Russia&CEE, дизайн-лид в Luxoft Digital. Клиенты: Citibank (US), JPMorgan, GIC (Singapore), UBS, Blackhorse, Nordea, ING (Luxembourg) и другие. Лектор в Британской высшей школе дизайна.</p>
-        </div>
+
       </Slider>
 
     </div>

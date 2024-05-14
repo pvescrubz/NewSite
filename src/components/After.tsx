@@ -1,7 +1,13 @@
-import React from "react";
 import SchoolIcon from '@mui/icons-material/School';
+import React from 'react';
 
-export const After = () => {
+interface MycontextPropse {
+    context: string; // Определяем тип context как строку
+    t: (key: string) => string; // Предполагая, что t имеет тип any, но лучше указать конкретный тип, если это возможно
+  }
+
+export const After:React.FC<MycontextPropse> = ({ context, t }) => {
+
     return (
         <div className="container">
 
@@ -13,36 +19,35 @@ export const After = () => {
                     <div className="after-block__left-text-block ">
                         <h3 className="after-block__right-main_title">Резюме</h3>
                         <p className="after-block__left-text-main">Должность</p>
-                        <p className="after-block__left-text-gray">Продуктовый дизайнер</p>
+                        <p className="after-block__left-text-gray">{t(`${context}.afterblock.text1`)}</p>
                     </div>
 
                     <div className="after-block__left-instruments">
                         <p className="after-block__left-text-main">Инструменты</p>
                         <div className="after-block__left-imgs">
-                            <img className="after-block__left-img" src="../../public/bank.jpg"></img>
-                            <img className="after-block__left-img" src="../../public/nind.jpg"></img>
-                            <img className="after-block__left-img" src="../../public/figma.jpg"></img>
-                            <img className="after-block__left-img" src="../../public/react.jpg"></img>
-                            <img className="after-block__left-img" src="../../public/tilda.jpg"></img>
-                            <img className="after-block__left-img" src="../../public/wind.jpg"></img>
+                            <img className="after-block__left-img" src={t(`${context}.afterblock.img1`)}></img>
+                            <img className="after-block__left-img" src={t(`${context}.afterblock.img2`)}></img>
+                            <img className="after-block__left-img" src={t(`${context}.afterblock.img3`)}></img>
+                            <img className="after-block__left-img" src={t(`${context}.afterblock.img4`)}></img>
+                            <img className="after-block__left-img" src={t(`${context}.afterblock.img5`)}></img>
+                            <img className="after-block__left-img" src={t(`${context}.afterblock.img6`)}></img>
                         </div>
                     </div>
                     <div className="after-block__left-text-block">
 
                         <p className="after-block__left-text-gray">Навыки</p>
                         <ul className="after-block__left-list">
-                            <li className="after-block-left-item">Создание дизайн-концепций.</li>
-                            <li className="after-block-left-item">Cоздание веб-сайтов и адаптивных страниц.</li>
-                            <li className="after-block-left-item">Дизайн мобильных приложений.</li>
-                            <li className="after-block-left-item">UX-исследования.</li>
-                            <li className="after-block-left-item">Фреймворки CJM и JTBD.</li>
-                            <li className="after-block-left-item">Создание вайрфреймов и прототипирование.</li>
-                            <li className="after-block-left-item">No-code инструменты.</li>
-                            <li className="after-block-left-item">Гибкие методологии Agile и Scrum.</li>
-                            <li className="after-block-left-item">Продуктовые метрики.</li>
-                            <li className="after-block-left-item">Построение и проверка продуктовых гипотез.</li>
-                            <li className="after-block-left-item">Основы маркетинга и бренд-позиционирования продукта.</li>
-                            <li className="after-block-left-item">Презентация решений команде и заказчику.</li>
+                            <li className="after-block-left-item">{t(`${context}.afterblock.skill1`)}</li>
+                            <li className="after-block-left-item">{t(`${context}.afterblock.skill2`)}</li>
+                            <li className="after-block-left-item">{t(`${context}.afterblock.skill3`)}</li>
+                            <li className="after-block-left-item">{t(`${context}.afterblock.skill4`)}</li>
+                            <li className="after-block-left-item">{t(`${context}.afterblock.skill5`)}</li>
+                            <li className="after-block-left-item">{t(`${context}.afterblock.skill6`)}</li>
+                            <li className="after-block-left-item">{t(`${context}.afterblock.skill7`)}</li>
+                            <li className="after-block-left-item">{t(`${context}.afterblock.skill8`)}</li>
+                            <li className="after-block-left-item">{t(`${context}.afterblock.skill9`)}</li>
+                            <li className="after-block-left-item">{t(`${context}.afterblock.skill10`)}</li>
+                            <li className="after-block-left-item">{t(`${context}.afterblock.skill11`)}</li>
                         </ul>
                     </div>
 
@@ -56,35 +61,35 @@ export const After = () => {
                         <div className="after-block__right-resume-list">
                             <div className="after-block__right-resume-item">
                                 <SchoolIcon />
-                                <p className="after-block__right-resume-text">Проработанные экраны для приложения</p>
+                                <p className="after-block__right-resume-text">{t(`${context}.afterblock.imgtext1`)}</p>
                             </div>
                             <div className="after-block__right-resume-item">
                             <SchoolIcon />
-                                <p className="after-block__right-resume-text">Путь пользователя для сайта</p>
+                                <p className="after-block__right-resume-text">{t(`${context}.afterblock.imgtext2`)}</p>
                             </div>
                             <div className="after-block__right-resume-item">
                             <SchoolIcon />
-                                <p className="after-block__right-resume-text">Дизайн веб-интерфейса</p>
+                                <p className="after-block__right-resume-text">{t(`${context}.afterblock.imgtext3`)}</p>
                             </div>
                             <div className="after-block__right-resume-item">
                             <SchoolIcon />
-                                <p className="after-block__right-resume-text">Дизайн мобильного приложения</p>
+                                <p className="after-block__right-resume-text">{t(`${context}.afterblock.imgtext4`)}</p>
                             </div>
                             <div className="after-block__right-resume-item">
                             <SchoolIcon />
-                                <p className="after-block__right-resume-text">Дизайн продукта</p>
+                                <p className="after-block__right-resume-text">{t(`${context}.afterblock.imgtext5`)}</p>
                             </div>
                             <div className="after-block__right-resume-item">
                             <SchoolIcon />
-                                <p className="after-block__right-resume-text">Продуктовый кейс от IT-компании</p>
+                                <p className="after-block__right-resume-text">{t(`${context}.afterblock.imgtext6`)}</p>
                             </div>
                         </div>
                     </div>
                     <div className="after-block__right-imgs">
-                        <img className="after-block__right-img" src="../../public/after1.jpg"></img>
-                        <img className="after-block__right-img" src="../../public/after2.jpg"></img>
-                        <img className="after-block__right-img" src="../../public/after3.jpg"></img>
-                        <img className="after-block__right-img" src="../../public/after4.jpg"></img>
+                        <img className="after-block__right-img" src={t(`${context}.afterblock.imgbig1`)}></img>
+                        <img className="after-block__right-img" src={t(`${context}.afterblock.imgbig2`)}></img>
+                        <img className="after-block__right-img" src={t(`${context}.afterblock.imgbig3`)}></img>
+                        <img className="after-block__right-img" src={t(`${context}.afterblock.imgbig4`)}></img>
                     </div>
                     <div className="after-block__right-info">
                         <div className="after-block__right-info-left white-round">
