@@ -117,7 +117,6 @@ const FormComponent = () => {
         />
       </div>
       <div className='form-input'>
-        
         <input
           type="tel"
           id="phone"

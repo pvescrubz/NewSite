@@ -9,6 +9,8 @@ import { UX_course } from './pages/UX-course.tsx';
 import { Graph_design } from './pages/Graph_design.tsx';
 import { Courseall } from './pages/Coursesall.tsx';
 import { D3_course } from './pages/3d-course.tsx';
+import { Illustration } from './pages/Illustration.tsx';
+import { Pay } from './pages/Pay.tsx';
 
 function App() {
   
@@ -22,6 +24,8 @@ function App() {
           <Route path="Graph_design" element={<Graph_design />} />
           <Route path="Courseall" element={<Courseall />} />
           <Route path="3d-course" element={<D3_course />} />
+          <Route path="Illustration" element={<Illustration />} />
+          <Route path="Pay" element={<Pay />} />
         </Route>
       </Routes>
     </>

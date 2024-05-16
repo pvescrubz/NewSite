@@ -40,7 +40,7 @@ export const Courseall = () => {
                         <p className="curse-big-text">3D-художник</p>
                     </div>
                     </NavLink>
-                    <NavLink to='/' className="course-link illut">
+                    <NavLink to='/Illustration' className="course-link illut">
                     <div className="course-item">
                         <div className="title-curse-main">
                             <p className="curse-main-text">Анимация и иллюстрация • </p>

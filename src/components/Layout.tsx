@@ -11,6 +11,7 @@ export const Layout = () => {
         <div className="nav-menu">
         <NavLink to='/' className={ ({isActive}) => isActive? 'active-link nav-link' : "nav-link" } >Главная</NavLink>
         <NavLink to='/Courseall' className={ ({isActive}) => isActive? 'active-link nav-link' : "nav-link" } >Наши Курсы</NavLink>
+        <NavLink to='/Pay' className={ ({isActive}) => isActive? 'active-link nav-link' : "nav-link" } >Купить Курсы</NavLink>
         </div>
         <div className="cabinet-block">
             <a className="login-btn">Вход</a>
