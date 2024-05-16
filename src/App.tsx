@@ -10,8 +10,7 @@ import { Graph_design } from './pages/Graph_design.tsx';
 import { Courseall } from './pages/Coursesall.tsx';
 import { D3_course } from './pages/3d-course.tsx';
 import { Illustration } from './pages/Illustration.tsx';
-import { Pay } from './pages/Pay.tsx';
-
+import PaymentPage from './components/PaymentPage.tsx';
 function App() {
   
   return (
@@ -25,7 +24,7 @@ function App() {
           <Route path="Courseall" element={<Courseall />} />
           <Route path="3d-course" element={<D3_course />} />
           <Route path="Illustration" element={<Illustration />} />
-          <Route path="Pay" element={<Pay />} />
+          <Route path='test' element={<PaymentPage/>} />
         </Route>
       </Routes>
     </>
